@@ -1,14 +1,15 @@
 const jwt = require('jsonwebtoken');
-const {secret} = require('./config');
+const { secret } = require('./config');
 
-const generateAcessToken = (id, email) => {
+const generateAcessToken = (id, role, email) => {
   const payload = {
     id,
+    role,
     email
   };
 
-  // TODO delete 24 h
-  return jwt.sign(payload, secret, { expiresIn: "24h" });
+  // TODO none expiresIn for submitted;
+  return jwt.sign(payload, secret, { expiresIn: "1d" });
 }
 
 module.exports = generateAcessToken;

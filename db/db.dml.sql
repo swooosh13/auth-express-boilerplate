@@ -1,0 +1,1 @@
+INSERT INTO users (email, password, username, userRole) VALUES ("user1@mail.ru")

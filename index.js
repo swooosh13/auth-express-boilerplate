@@ -6,8 +6,8 @@ app.use(express.json());
 const userRouter = require('./routes/userRouter');
 const authRouter = require('./routes/authRouter');
 
-app.use('/api', userRouter);
-app.use('/api', authRouter);
+app.use('/', userRouter);
+app.use('/', authRouter);
 
 const start = async () => {
    try {

@@ -17,6 +17,7 @@ class authController {
       }
 
       const { email, password } = req.body;
+      console.log("email: ", email);
 
       const candidate = await db.query(`SELECT * FROM users where email = '${email}'`);
 
@@ -60,13 +61,13 @@ class authController {
           message: "incorrect password entered"
         });
       }
-      
-      token = generateAcessToken(findUser.rows[0].id, findUser.rows[0].email);
+
+      token = generateAcessToken(findUser.rows[0].id, findUser.rows[0].role, findUser.rows[0].email);
       return res.json({
         token
       });
 
-    } catch(e) {
+    } catch (e) {
       console.log(token);
       console.log("login error.");
     }
