@@ -29,6 +29,6 @@ Server applications:
 
 ## Installation
 
-* `git clone https://github.com/swooosh13/auth-service-express.git`
+* `git clone https://github.com/swooosh13/study-auth-service-express.git`
 * `cd auth-service-express`
 * `npm start`
