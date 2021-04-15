@@ -68,7 +68,6 @@ class authController {
       });
 
     } catch (e) {
-      console.log(token);
       console.log("login error.");
     }
   }

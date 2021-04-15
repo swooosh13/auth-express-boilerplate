@@ -4,10 +4,14 @@ const userController = require('../controllers/userController');
 const authMiddleware = require('../middlewares/authMiddleware');
 const roleMiddleware = require('../middlewares/roleMiddleware');
 
-// /api/user?id=2
-router.get('/user', authMiddleware, roleMiddleware(['ADMIN']), userController.getUser)
+// /user?id=2
+router.get('/user', authMiddleware, roleMiddleware(['ADMIN', 'SUPERUSER']), userController.getUser);
 
-router.delete('/user/:id',authMiddleware, roleMiddleware(['ADMIN']),  userController.deleteUser);
-router.put('/user', authMiddleware, roleMiddleware(['ADMIN']), userController.updateUser);
+// /user/1
+router.delete('/user/:id',authMiddleware, roleMiddleware(['ADMIN', 'SUPERUSER']),  userController.deleteUser);
 
+// /user/1
+router.put('/user', authMiddleware, roleMiddleware(['ADMIN', 'SUPERUSER']), userController.updateUsername);
+
+router.put('/user/role', authMiddleware, roleMiddleware(['SUPERUSER']), userController.updateRole);
 module.exports = router;
