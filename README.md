@@ -30,5 +30,6 @@ Server applications:
 ## Installation
 
 * `git clone https://github.com/swooosh13/study-auth-service-express.git`
-* `cd auth-service-express`
+* `cd study-auth-service-express`
+* `npm install`
 * `npm start`
