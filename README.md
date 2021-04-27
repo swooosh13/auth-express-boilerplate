@@ -1,4 +1,4 @@
-# study-auth-server-express-postgresql
+# Express basic Auth using JWT
 
 ### This repository was created to study the interaction of a Node js with a Database without any ORM, Passport js etc.
 
@@ -29,7 +29,7 @@ Server applications:
 
 ## Installation
 
-* `git clone https://github.com/swooosh13/study-auth-service-express.git`
+* `git clone https://github.com/swooosh13/auth-service-express.git`
 * `cd study-auth-service-express`
 * `npm install`
 * `npm start`
