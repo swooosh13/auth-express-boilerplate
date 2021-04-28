@@ -1,8 +1,8 @@
 # Express basic Auth using JWT
 
-### This repository was created to study the interaction of a Node js with a Database without any ORM, Passport js etc.
+### This repository was created to study the interaction of only a Node js with a Database
 
-Only:
+Contains:
 * Express, PostgreSQL, JWT token, Bcrypt
 * authMiddleware and roleMiddleware
 
